@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root{
+    --colorMenu: linear-gradient(to bottom, #f3880d, #f3900b, #f3980a, #f39f0a, #f3a70d);
+    --colorFuenteMenu: black;
+    --colorFuenteMenuHover: white;
+    --colorEtiquetaAfterMenu: rgb(45, 45, 45);
+    --colorFuenteEtiquetaAfterMenu: azure;
+    --colorSection: linear-gradient(to right top, #f3880d, #f49605, #f5a401, #f4b203, #f3c00d);
+    --colorFuenteSection: black;
+    --imagenFondo: url(../img/pkm2.jpg);
+    --colorCabezeraTabla: rgb(0, 17, 255);
+    --colorfuenteCabezareTabla: white;
+    --colorCeldasTabla: rgb(229, 232, 236);
+    --colorFuenteCeldasTabla: black;
+    --colorTarjetaPokemon: #fff;
+    --colorTituloTarjetaPokemon: #555;
+    --colorFuenteTarjetaPokemon: black;
+}
+
+html{
+    margin: 0%;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Mulish', sans-serif;
+}
+
+body{
+    background-image: var(--imagenFondo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+header img{
+    margin-top: 1em;
+    margin-left: 18%;
+}
+
+h2{
+    font-size: xx-large;
+}
+
+/*ESTILOS DEL MENU DE NAVEGACIÓN*/
+
+.menu-lateral{
+    background-image: var(--colorMenu);
+    float: left;
+    width: 3.6em;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 2em;
+    height: 100%;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.menu-lateral ul{
+    margin-top: auto;
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 160px;
+}
+
+.menu-lateral ul li{
+    margin-top: 20px;
+    padding-bottom: 5%;
+}
+
+.menu-lateral ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: var(--colorFuenteMenu);
+    display: flex;
+    transition: all 0.1s linear;
+}
+
+.menu-lateral ul li a:hover::after{
+    font-family: 'Nunito', sans-serif;
+    font-weight: lighter;
+    /*content: "Historia";*/
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    background-color: var(--colorEtiquetaAfterMenu);
+    font-size: 16px;
+    padding: 2px;
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-left: 18px;
+    margin-left: 4px;
+}
+
+#primer-nlc:hover::after{
+    content: "Historia";
+    color: var(--colorFuenteEtiquetaAfterMenu);
+}
+
+#segundo-nlc:hover::after{
+    content: "Tipos";
+    color: var(--colorFuenteEtiquetaAfterMenu);
+}
+
+#tercer-nlc:hover::after{
+    content: "Juegos";
+    color: var(--colorFuenteEtiquetaAfterMenu);
+}
+
+#cuarto-nlc:hover::after{
+    content: "Películas";
+    color: var(--colorFuenteEtiquetaAfterMenu);
+}
+
+#quinto-nlc:hover::after{
+    content: "Curiosidades";
+    color: var(--colorFuenteEtiquetaAfterMenu);
+}
+
+#sexto-nlc:hover::after{
+    content: "Galería";
+    color: var(--colorFuenteEtiquetaAfterMenu);
+}
+
+#modo-oscuro:hover::after{
+    content: "Modo";
+    color: var(--colorFuenteEtiquetaAfterMenu);
+}
+
+.menu-lateral ul li a:hover{
+    font-weight: bold;
+    content: "Historia";
+    color: var(--colorFuenteMenuHover);
+    cursor: pointer;
+}
+
+
+/***************************************************************/
+
+.contenedor-principal{
+    display: inline-block;
+    width: 70%;
+    margin-right: auto;
+    margin-left: 16%;
+    margin-bottom: 5em;
+}
+
+section{
+    color: var(--colorFuenteSection);
+    width: 100%;
+    background-image: var(--colorSection);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 20px;
+    margin-bottom: 2em;
+}
+
+.contenedor-juegos{
+    display: inline-block;
+    padding: 0%;
+}
+
+img.derecha{
+    float: right;
+    width: 30%;
+    height: 28%;
+    margin: 1em;
+}
+
+img.izquierda{
+    float: left;
+    width: 30%;
+    height: 28%;
+    margin: 1em;
+}
+
+#sec1 p{
+    margin-bottom: 15px;
+}
+
+#sec2 table{
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border: #000 2px;
+}
+
+#sec2 table tr th{
+    background-color: var(--colorCabezeraTabla);
+    color: var(--colorfuenteCabezareTabla);
+}
+
+#sec2 table tr{
+    text-align: center;
+    color: var(--colorFuenteCeldasTabla);
+    background-color: var(--colorCeldasTabla);
+}
+
+#sec2 table tr td img{
+    margin-top: 2px;
+}
+
+#sec3 h3 a{
+    color: var(--colorFuenteSection);
+    text-decoration: underline;
+}
+
+#sec3 h3 a:hover{
+    font-size: larger;
+    color: white;
+}
+
+#sec4 table{
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#sec4 table tr th{
+    background-color: var(--colorCabezeraTabla);
+    color: var(--colorfuenteCabezareTabla);
+}
+
+#sec4 table tr{
+    text-align: center;
+    color: var(--colorFuenteCeldasTabla);
+    background-color: var(--colorCeldasTabla);
+    height: 1.5em;
+}
+
+#sec4 table tr td a{
+    text-decoration: none;
+    color: var(--colorFuenteCeldasTabla);
+}
+
+#sec4 table tr td a:hover{
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+#sec5 ul li{
+    margin-bottom: 10px;
+}
+
+#sec6 .img-contenedor {
+    padding-left: 2.5em;
+    max-width: 1024px;
+    width: 90%;
+    margin: 0;
+    display: inline-block;
+    /*display:grid;*/
+}
+
+
+#sec6 .img-contenedor img{
+    margin: 0;
+    padding: 10px;
+    width: 30%;
+    transition: all 0.2s ease-in;
+}
+
+#sec6 h3{
+    color: var(--colorFuenteSection);
+    text-decoration: underline;
+}
+
+#sec6 .img-contenedor img:hover{
+    cursor: pointer;
+    width: 31%;
+    box-shadow: rgba(248, 248, 248, 0.386) 0px 54px 55px, rgba(251, 249, 249, 0.244) 0px -12px 30px, rgba(247, 247, 247, 0.326) 0px 4px 6px, rgba(251, 251, 251, 0.293) 0px 12px 13px, rgba(255, 253, 253, 0.216) 0px -3px 5px;
+}
+
+#sec6 .video-contenedor{
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sec6 .video-contenedor P{
+    margin-top: 30px;
+}
+
+#sec6 .video-contenedor video{
+    width: 100%;
+}
+
+#sec6 .presentacion-contenedor{
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#sec6 .presentacion-contenedor .tarjeta{
+    background: var(--colorTarjetaPokemon);
+    position: relative;
+    width: 40%;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#sec6 .presentacion-contenedor .tarjeta:hover {
+    height: 380px;
+}
+
+#sec6 .presentacion-contenedor .tarjeta .caja-img{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 50%;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+}
+
+#sec6 .presentacion-contenedor .tarjeta .caja-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#sec6 .presentacion-contenedor .tarjeta:hover .caja-img img{
+    border-radius: 10%;
+}
+
+#sec6 .presentacion-contenedor .tarjeta .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#sec6 .presentacion-contenedor .tarjeta .content .detalles{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(250px);
+}
+
+#sec6 .presentacion-contenedor .tarjeta:hover .content .detalles{
+    transform: translateY(0px);
+}
+
+#sec6 .presentacion-contenedor .tarjeta:hover .content .detalles p{
+    color: var(--colorFuenteTarjetaPokemon)
+}
+
+#sec6 .presentacion-contenedor .tarjeta .content .detalles h4{
+    font-size: 1.25em;
+    color: var(--colorTituloTarjetaPokemon);
+    line-height: 1.2em;
+}
+
+#sec6 .presentacion-contenedor .tarjeta .content .detalles audio{
+    width: 80%;
+}
+
+h4 #Blb{
+    color: red;
+}
+
+h4 #Char{
+    color: blue;
+}
+
+h4 .squi{
+    color: green;
+}
+
+/*+++++++++++++++++++++++++++++++ SECCIÓN DEL FOOTER ++++++++++++++++++++++++++*/
+
+footer{
+    height: 7em;
+    background-color: purple;
+    /*position: fixed;*/
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    color: aliceblue;
+}
+
+footer .content-footer{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer a{
+    color: white;
+}
+
+footer a i{
+    font-size: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+footer a i:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ins:hover{
+    color: rgb(208, 5, 254);
+}
+
+.face:hover{
+    color: rgb(15, 18, 203);
+}
+
+.twi:hover{
+    color: rgb(6, 178, 247);
+}
+
+/******* ESTILOS DEL MODO OSCURO *****************/
+.menu-lateral .oscuro{
+    background-image: linear-gradient(to right top, #051937, #001b4a, #001a5c, #0a176d, #270b7b);
+}
+
+
+
+
+/*************** MEDIA QUERIES *****************/
+
+
+@media (max-width: 992px){
+
+    .menu-lateral ul li{
+        margin-top: 20px;
+        padding-bottom: 20%;
+    }
+
+    img.derecha{
+        float: none;
+        width: 70%;
+        height: 28%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img.izquierda{
+        float: none;
+        width: 70%;
+        height: 28%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #sec6 .img-contenedor img {
+        width: 40%;
+        height: 38%;
+    }
+
+    #sec6 .img-contenedor {
+        padding-left: 6%;
+        /*display:grid;*/
+    }
+    
+    #sec6 .img-contenedor img:hover{
+        width: 41%;
+    }
+
+    #sec6 .video-contenedor{
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 987px){
+    #sec6 .presentacion-contenedor{
+        display: inline;
+        width: 80%;
+        align-items: center;
+    }
+
+    #sec6 .presentacion-contenedor .tarjeta{
+        margin-top: 100px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 750px){
+    #sec6 .presentacion-contenedor .tarjeta{
+        width: 70%;
+    }
+}
+
+@media (max-width: 415px){
+
+    .menu-lateral ul li{
+        margin-top: 20px;
+        padding-top: 0%;
+        padding-bottom: 40%;
+    }
+
+    .menu-lateral{
+        float: left;
+        width: 3em;
+    }
+
+    .menu-lateral ul li a{
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    section{
+        background-color: black;
+    }
+
+    img.derecha{
+        float: none;
+        width: 90%;
+        height: 28%;
+    }
+
+    img.izquierda{
+        float: none;
+        width: 90%;
+        height: 28%;
+    }
+
+    #sec4 table{
+        width: 100%;
+    }
+
+    #sec6 .img-contenedor img{
+        width: 90%;
+        height: 38%;
+    }
+
+    #sec6 .img-contenedor img:hover{
+        width: 94%;
+    }
+    
+    footer .content-footer{
+        width: 80%;
+        margin-left: 3.6em;
+    }
+
+    .menu-lateral ul li a:hover::after{
+        display: none;
+    }
+
+    #sec6 .video-contenedor{
+        width: 95%;
+    }
+
+    #sec6 .presentacion-contenedor .tarjeta{
+        margin-top: 100px;
+        width: 100%;
+    }
+}
